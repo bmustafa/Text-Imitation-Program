@@ -1,0 +1,11 @@
+writer: List.o 
+	c++ -o writer writer.cc List.o 
+
+#ListTest: List.o
+#	#c++ -o ListTest ListTest.cc List.o
+
+List.o: List.h
+	c++ -c List.cc
+
+clean:
+	/bin/rm -f *.o writer
